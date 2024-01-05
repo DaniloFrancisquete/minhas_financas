@@ -24,7 +24,7 @@ export class DashboardComponent  implements OnInit {
     { value: 11, viewValue: 'Dezembro'}
   ]
 
-  entradas: any [] = [];
+  entrada: any [] = [];
   saldo = 0;
   despesa = 0;
   receita = 0;
@@ -35,15 +35,15 @@ export class DashboardComponent  implements OnInit {
 
   ngOnInit(): void {
    this.dashboardService.getEntradas()
-   .subscribe(entradas => {
-   this.entradas = entradas;
+   .subscribe(entrada => {
+   this.entrada = entrada;
    this.getReceitas();
    this.getSaldo();
    }) 
   }
 
    getReceitas() {
-    this.entradas.forEach((entrada: Entrada) => {
+    this.entrada.forEach((entrada: Entrada) => {
 
       if(entrada.tipo === 'receita' ){
       this.receita += parseInt(entrada.valor);

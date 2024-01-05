@@ -1,4 +1,7 @@
 <div class="container">
+
+  <button mat-raised-button color="accent" (click)="novaCategoria()">Novo</button>
+
     <table mat-table [dataSource]="dataSource">
   
       <!-- Nome Column -->
@@ -12,12 +15,24 @@
         <th mat-header-cell *matHeaderCellDef> Descrição </th>
         <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
       </ng-container>
+
+      <!-- Editar Column -->
+      <ng-container matColumnDef="editar">
+        <th mat-header-cell *matHeaderCellDef> Editar </th>
+        <td mat-cell *matCellDef="let element"> <mat-icon (click)="chamarEdicao(element)" style="color: rgb(62, 163, 203);cursor: pointer;">edit</mat-icon> </td>
+      </ng-container>
+
+       <!-- Editar Column -->
+       <ng-container matColumnDef="excluir">
+        <th mat-header-cell *matHeaderCellDef> Excluir </th>
+        <td mat-cell *matCellDef="let element"> <mat-icon (click)="excluir(element.id)" style="color: rgb(216, 84, 84);cursor: pointer;">delete</mat-icon> </td>
+      </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+    <mat-paginator [pageSizeOptions]="[ 10, 20]"
                    showFirstLastButtons
                    aria-label="Select page of periodic elements">
     </mat-paginator>

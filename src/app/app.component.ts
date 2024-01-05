@@ -11,7 +11,7 @@ export class AppComponent {
   menu : any [] = [
     {descricao: 'Dashboard', rota: 'dashboard'},
     {descricao: 'Categorias', rota: 'categorias'},
-    //{descricao: 'Entrada', rota: 'Entrada'},
+    {descricao: 'Entradas', rota: 'entradas'},
   ]
 
 }

@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{HttpClientModule} from "@angular/common/http";
 import { ToolbarComponent } from './commom/componetes/toolbar/toolbar.component';
 import { MaterialModule } from './shared/material/material.module';
+import { ListComponent } from './features/entradas/components/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
