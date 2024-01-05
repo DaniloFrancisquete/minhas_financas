@@ -60,15 +60,6 @@
       "tipo": "receita"
     },
     {
-      "id": 4,
-      "nome": "Netflix",
-      "categoriaId": 3,
-      "pago": true,
-      "data": "16/03/2023",
-      "valor": "15,00",
-      "tipo": "despesa"
-    },
-    {
       "id": 5,
       "nome": "Mercado",
       "categoriaId": 2,
@@ -111,15 +102,6 @@
       "pago": false,
       "data": "25/03/2023",
       "valor": "30,00",
-      "tipo": "despesa"
-    },
-    {
-      "id": 19,
-      "nome": "Netflix",
-      "categoriaId": 3,
-      "pago": false,
-      "data": "07/04/2023",
-      "valor": "15,00",
       "tipo": "despesa"
     },
     {

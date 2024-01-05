@@ -3,15 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { EntradasRoutingModule } from './entradas-routing.module';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/app/shared/material/material.module';
+
 
 
 @NgModule({
   declarations: [
-    FormularioComponent
+    FormularioComponent,
+  
   ],
   imports: [
     CommonModule,
-    EntradasRoutingModule
+    EntradasRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    
   ]
 })
 export class EntradasModule { }
