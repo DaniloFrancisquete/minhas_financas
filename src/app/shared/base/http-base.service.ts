@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -19,7 +19,7 @@ if(injector == null || injector == undefined){
 this.httpCliente = injector.get(HttpClient);
   }
 
-  protected httpGet(enpoint: string):Observable<any>{
+  protected httpGet(enpoint: string, ):Observable<any>{
     return this.httpCliente.get(`${this.apiBase}${enpoint}`);
   }
   
